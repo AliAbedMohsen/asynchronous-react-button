@@ -12,8 +12,16 @@ const App = () => {
 
   return (
 
-    <div>
+    <div >
       <AsynchronousReactButton onClick={mockedAsyncCall} label="Call Async" />
+      <AsynchronousReactButton 
+          label={ <>submit</>} 
+          loader={<>submitting...</>} 
+          onClick={mockedAsyncCall}
+          btnStyle={{width:"15em"}}
+          confirm={{message:"agree to the terms and conditions of my complemetal herofeca lopiz??"}}
+      />
+      
     </div>
   );
 };
