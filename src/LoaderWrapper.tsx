@@ -7,16 +7,21 @@
  * @since   now
  */
 
- import React from "react";
- import { LoaderWrapperProps} from './interfaces'
- export default (props:LoaderWrapperProps)=>{
+import React from "react";
+import { LoaderWrapperProps} from './interfaces'
+
+import style from './index.css'
+
+const WRAPPER_CLASS= style['__asynchronouts-react-button__loader-wrapper']
+
+export default (props:LoaderWrapperProps)=>{
      
      return(
-         <div className="__asynchronouts-react-button__loader-wrapper">
+         <div className={WRAPPER_CLASS}>
              {props.children}
          </div>
      )
- }
+}
  
  
  

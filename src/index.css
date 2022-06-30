@@ -15,8 +15,7 @@
 
 .__asynchronous-react-button__button{
     margin: 10px;
-    padding-left: 10x;
-    padding-right: 10px;
+    padding: 10x;
     border-radius: 5px;
     border-width: 1px;
     align-items: center;
@@ -32,7 +31,7 @@
 /* Loader wrapper */
 .__asynchronouts-react-button__loader-wrapper{
     position:absolute; 
-    left:0; 
+    left:25%; 
     top:40%;
     width:100%;
     height: 100%;

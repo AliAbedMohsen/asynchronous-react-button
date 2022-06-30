@@ -11,6 +11,11 @@ import React, {  useRef, useState } from 'react'
 import {AsynchronousReactButtonProps } from './interfaces'
 import LabelWrapper from './LabelWrapper';
 import LoaderWrapper from './LoaderWrapper';
+import style from './index.css'
+
+const WRAPPER_CLASS= style['__asynchronous-react-button__wrapper']
+const BUTTON_CLASS= style['__asynchronous-react-button__button']
+
 const DefaultProps = {
   loader:<span>loading..</span>,
   forceDisable:false,
@@ -107,7 +112,7 @@ export const AsynchronousReactButton: React.FC<AsynchronousReactButtonProps> =  
     
     return (
        
-        <div ref={ref} className={'__asynchronous-react-button__wrapper'} >
+        <div ref={ref} className={WRAPPER_CLASS} >
             {
               disabled?
                 <LoaderWrapper>{resolveLoader()}</LoaderWrapper>
@@ -116,7 +121,7 @@ export const AsynchronousReactButton: React.FC<AsynchronousReactButtonProps> =  
 
 
             <button 
-                  className={btnClass || '__asynchronous-react-button__button'} 
+                  className={btnClass || BUTTON_CLASS} 
                   style={btnStyle}
                   disabled={isDisabled}  
                   onClick={_onClick}
