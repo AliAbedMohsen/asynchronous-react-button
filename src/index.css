@@ -1,0 +1,52 @@
+
+/** 
+ * Css style : index.css
+ *
+ * @author  Ali Mohsen
+ * @version 0.1.0, 30/06/2022
+ * @since   now
+ */
+
+ /* Button style */
+.__asynchronous-react-button__wrapper{
+    position: relative;
+    width: fit-content;
+}
+
+.__asynchronous-react-button__button{
+    margin: 10px;
+    padding-left: 10x;
+    padding-right: 10px;
+    border-radius: 5px;
+    border-width: 1px;
+    align-items: center;
+    border-color: #777;
+    width:7em;
+    height:4em;
+    position:relative;
+    text-align:center;
+    cursor:pointer;
+    border:1px solid #777;
+    
+}
+/* Loader wrapper */
+.__asynchronouts-react-button__loader-wrapper{
+    position:absolute; 
+    left:0; 
+    top:40%;
+    width:100%;
+    height: 100%;
+}
+
+/* Label wrapper  */
+.__asynchronouts-react-button__label-wrapper{
+
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+
+
