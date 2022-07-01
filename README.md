@@ -74,7 +74,7 @@ An optional string or react component to display once the button is clicked and 
 
 #### icon
 
-An optional react compoent (idealy is a component that returns an HTML <img> or <i> to specify an icon).
+An optional react compoent (idealy is a component that returns an HTML `<img>` or `<i>` to specify an icon).
 
 #### forceDisable
 
