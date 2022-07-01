@@ -62,5 +62,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/AliAbedMohsen/asynchronous-react-button"
-  }
+  },
+  "keywords": ["react", "async", "asynchronous", "button"]
 }
