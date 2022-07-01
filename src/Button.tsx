@@ -185,7 +185,13 @@ export const AsynchronousReactButton: React.FC<AsynchronousReactButtonProps> =  
               
           </button> 
 
-          <Dialog isShown={isShown} onAction={onDialogAction} message={confirm? confirm.message : null} ok="Alright" cancel="No" />
+          <Dialog 
+            isShown={isShown} 
+            onAction={onDialogAction} 
+            message={confirm? confirm.message : null} 
+            ok={confirm? confirm.ok : "Ok"}
+            cancel={confirm? confirm.cancel: "Cancel"} 
+          />
 
       </div>
    
