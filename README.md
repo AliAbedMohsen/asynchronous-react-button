@@ -88,6 +88,9 @@ An optional string to specify a custom class name/s which ovverides the default 
 
 An optional CSS Object for inline styling.
 
+#### confirm
+
+An optional js Object consist of three keys for the built in dialog component. Keys are `message` (the confirmation message), `ok` (ok button default is "Ok" ), and `cancel` (cancel button default is "Cancel" )
 
 ## Contributing
 
