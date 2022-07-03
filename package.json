@@ -51,6 +51,7 @@
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "husky": "^8.0.1",
+    "identity-obj-proxy": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup-plugin-postcss": "^4.0.2",
@@ -63,5 +64,18 @@
     "type": "git",
     "url": "https://github.com/AliAbedMohsen/asynchronous-react-button"
   },
-  "keywords": ["react", "async", "asynchronous", "button"]
+  "keywords": [
+    "react",
+    "async",
+    "asynchronous",
+    "button"
+  ],
+  
+    "jest":{
+       "moduleNameMapper": {
+        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+        "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+      }
+    }
+  
 }
