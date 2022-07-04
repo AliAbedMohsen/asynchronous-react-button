@@ -3,3 +3,6 @@ declare module '*.css' {
     export default content;
 }
 
+declare module globalThis {
+    var IS_REACT_ACT_ENVIRONMENT= boolean
+}
