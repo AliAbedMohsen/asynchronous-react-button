@@ -20,17 +20,17 @@ afterEach(() => {
 });
 
 describe('Asynchronous React Button', () => {
-  it("it should Throw Error if onClick is not set", () => {
-      
-    act(() => {
-        render(<ARB onClick={onClick} label="submit"/>, container);
+      it("it should Throw Error if onClick is not set", () => {
+          
+        act(() => {
+            render(<ARB label="submit"/>, container);
+        });
+        
+        let btn= container.querySelector("button") as HTMLInputElement;
+        
+        expect(btn.textContent).toContain("submit");
+        
     });
-    
-    let btn= container.querySelector("button") as HTMLInputElement;
-    
-    expect(btn.textContent).toContain("submit");
-    
-});
 
     it("it should render a labeled button with given value", () => {
       

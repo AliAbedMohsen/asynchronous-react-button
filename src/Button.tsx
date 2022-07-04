@@ -13,13 +13,17 @@ import LabelWrapper from './LabelWrapper';
 import LoaderWrapper from './LoaderWrapper';
 import style from './index.css'
 import Dialog from './Dialog'
+import propTypes from  './propTypes';
 const WRAPPER_CLASS= style['__asynchronous-react-button__wrapper']
 const BUTTON_CLASS= style['__asynchronous-react-button__button']
 
 const DefaultProps = {
   loader:<span>loading..</span>,
   forceDisable:false,
+  confirm:{ok:"Ok", cancel:"Cancel", message:"Confirmed?"}
 };
+
+
 
 export const AsynchronousReactButton: React.FC<AsynchronousReactButtonProps> =  ( props ) => {
   
@@ -92,7 +96,7 @@ export const AsynchronousReactButton: React.FC<AsynchronousReactButtonProps> =  
 
   const releaseButton= ():any => {
     setDisabled(false)
-  }
+  } 
 
   const lockButton= ():any => {
     setDisabled(true)
@@ -145,6 +149,11 @@ export const AsynchronousReactButton: React.FC<AsynchronousReactButtonProps> =  
   }
   
   const passClick=() => {
+
+    if(typeof onClick!=="function") {
+      return 
+    } 
+
     lockButton()
     onClick(releaseButton)
   }
@@ -184,21 +193,25 @@ export const AsynchronousReactButton: React.FC<AsynchronousReactButtonProps> =  
 
               
           </button> 
-
-          <Dialog 
-            isShown={isShown} 
-            onAction={onDialogAction} 
-            message={confirm? confirm.message : null} 
-            ok={confirm? confirm.ok : "Ok"}
-            cancel={confirm? confirm.cancel: "Cancel"} 
-          />
+          {
+            confirm && confirm.message?
+              <Dialog 
+                isShown={isShown} 
+                onAction={onDialogAction} 
+                message={confirm? confirm.message : null} 
+                ok={confirm? confirm.ok : "Ok"}
+                cancel={confirm? confirm.cancel: "Cancel"} 
+              />
+            : null
+          }
 
       </div>
    
    ) 
 }
 
-
 AsynchronousReactButton.defaultProps = DefaultProps
 
-export default AsynchronousReactButton
+AsynchronousReactButton.propTypes= propTypes
+
+// export default AsynchronousReactButton

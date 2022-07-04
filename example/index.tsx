@@ -1,6 +1,7 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { createRoot } from "react-dom/client";
 import { AsynchronousReactButton } from '../.';
 // import 'index./css'
 const Loader=  (props:any)=>{
@@ -28,7 +29,6 @@ const App = () => {
 
     <div >
       <AsynchronousReactButton
-        onClick={mockedAsyncCall} 
         label="Call Async" 
         loader={
           <Loader />
@@ -46,4 +46,6 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const root= createRoot(document.getElementById('root') as HTMLElement)
+root.render( <React.StrictMode><App /> </React.StrictMode>)
+// ReactDOM.render(<App />, document.getElementById('root'));

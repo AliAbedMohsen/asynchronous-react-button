@@ -43,9 +43,10 @@ export default (props:any) => {
         let width= window.innerWidth
         setStyle({width:width+"px", height:height+"px"})
     }
+
     const onCancelHandler= ()=>{
 
-    onAction(false)
+        onAction(false)
     //    showDialog(false)
     }
 
@@ -65,8 +66,7 @@ export default (props:any) => {
                     <button className={OK} onClick={onOkHandler}>{ok}</button>
                     <button className={CANCEL} onClick={onCancelHandler}>{cancel}</button>
                 </div>
-            </div>
-            
+            </div>    
         </div>
     )
 }

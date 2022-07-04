@@ -8,7 +8,7 @@ export type CustomIcon = (props:{isLoading:false|true}) => JSX.Element;//React.C
 export type CSSObject = { [key: string]: string; }
 
 export  interface AsynchronousReactButtonProps {
-    onClick(releaseButton:FnReturnsAny): any;
+    onClick?(releaseButton:FnReturnsAny): any;
     btnStyle?:CSSObject;
     loader?:JSX.Element|string|CustomLoader;
     label: JSX.Element|string|CustomLabel;
