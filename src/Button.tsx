@@ -20,7 +20,7 @@ const BUTTON_CLASS= style['__asynchronous-react-button__button']
 const DefaultProps = {
   loader:<span>loading..</span>,
   forceDisable:false,
-  confirm:{ok:"Ok", cancel:"Cancel", message:"Confirmed?"}
+  // confirm:{ok:"Ok", cancel:"Cancel", message:"Confirmed?"}
 };
 
 
